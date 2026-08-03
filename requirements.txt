@@ -1,0 +1,11 @@
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+plotly>=5.18
+scipy>=1.11
+jupyter>=1.0
+notebook>=7.0
+
+# Optional (install later if you want county-level maps in Phase 9)
+# geopandas
+# streamlit

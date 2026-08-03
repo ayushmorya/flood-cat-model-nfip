@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.venv/
+env/
+
+# Data (NFIP files are large - do not push raw CSVs to GitHub)
+data/raw/*.csv
+data/raw/*.zip
+data/processed/*.csv
+
+# Keep folder structure visible in GitHub even though files are ignored
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!outputs/figures/.gitkeep
+
+# OS / editor
+.DS_Store
+.vscode/
