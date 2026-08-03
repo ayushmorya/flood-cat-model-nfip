@@ -6,9 +6,10 @@ venv/
 .venv/
 env/
 
-# Data (NFIP files are large - do not push raw CSVs to GitHub)
+# Data (NFIP files are large - do not push raw data to GitHub)
 data/raw/*.csv
 data/raw/*.zip
+data/raw/*.parquet
 data/processed/*.csv
 
 # Keep folder structure visible in GitHub even though files are ignored

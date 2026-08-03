@@ -24,17 +24,20 @@ built, not just how to describe one.
 
 | Dataset | Source | Used for |
 |---|---|---|
-| FIMA NFIP Redacted Claims (v2) | OpenFEMA | Historical realized flood losses |
-| FIMA NFIP Redacted Policies (v2) | OpenFEMA | Exposure (building value, coverage, flood zone) |
-| Disaster Declarations Summary | OpenFEMA | Tagging claims to specific flood events |
-| NCEI Storm Events Database | NOAA | Independent cross-check on event severity |
+| FIMA NFIP Redacted Claims (v2) | OpenFEMA (bulk Parquet download) | Hazard, Vulnerability, and Financial modules — this single dataset includes building value, coverage, deductible, damage amount, flood zone, and cause of loss per claim |
 
-Study area: *(fill in once you pick your county/state in Phase 2)*
+Study area: **Harris County, Texas** (FIPS 48201) — chosen for its long, dense flood claim history (1978-present, 170,803 claims), including Hurricane Harvey (2017).
+
+> Note: an earlier plan also used the separate NFIP Policies dataset for
+> exposure. It was dropped in favor of using the Claims dataset's own
+> building value/coverage fields — a simplification known in the industry
+> as burn-cost / historical loss analysis. This also avoided downloading
+> an 80-million-row national file for a single-county study.
 
 ## Project roadmap
 
 - [x] **Phase 1** — Environment & repo setup
-- [ ] **Phase 2** — Data collection (NFIP claims + policies)
+- [x] **Phase 2** — Data collection (NFIP claims, Harris County TX, 1978-present)
 - [ ] **Phase 3** — Data cleaning & exploratory analysis
 - [ ] **Phase 4** — Hazard module (empirical return periods)
 - [ ] **Phase 5** — Vulnerability module (damage ratios by flood zone)
